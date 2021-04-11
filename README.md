@@ -4,3 +4,7 @@ The program is capable of calculating the weight that the user enters on any pla
 You can download here the installer of the app https://drive.google.com/file/d/1ox1tn5_V-07CTucXQZYyJk_d0WEVxNLU/view?usp=sharing
 
 Thank you for reading.
+
+
+This is how the GUI looks like
+![gui](https://user-images.githubusercontent.com/80207106/114289384-c7317a80-9a4d-11eb-8c04-07534e69bb31.png)
