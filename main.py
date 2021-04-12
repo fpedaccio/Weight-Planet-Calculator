@@ -36,12 +36,15 @@ def calculate(selection):
     """Calculates the weight on selected planet where selection refers to the planeta(combobox) selection.
         Conditional at the start of the function catches exceptions on user input.
         g is reference to the g of selected planet which is declared while creating the class"""
-    if peso == 0 or selection == -1 or (not type(peso) == int):
+    if peso == 0 or selection == -1:
         return 
     else:
-        mass = peso.get()/9.8
-        g = (eval(selection)).g
-        res.set(str(mass*g))
+        try:
+            mass = peso.get()/9.8
+            g = (eval(selection)).g
+            res.set(str(mass*g))
+        except:
+            res.set("Invalid input for weight")
 
 #Class body - to create object body(panet/moon) with the English name of the planet, g and a function language
 #to add names of the bodies in alternate language
