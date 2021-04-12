@@ -41,10 +41,10 @@ def calculate(selection):
     else:
         try:
             mass = peso.get()/9.8
-            g = (eval(selection)).g
-            res.set(str(mass*g))
+            g = (body.bodies_list[selection]).g
+            res.set(str(round(mass*g,2)))
         except:
-            res.set("Invalid input for weight")
+            res.set("Invalid input")
 
 #Class body - to create object body(panet/moon) with the English name of the planet, g and a function language
 #to add names of the bodies in alternate language
@@ -68,7 +68,7 @@ Saturan = body("Saturan",10.74)
 Mercury = body("Mercury",3.70)
 Venus = body("Venus",8.87)
 Uranus = body("Uranus",8.87)
-Npetune = body("Neptune",11.15)
+Neptune = body("Neptune",11.15)
 Europa = body("Europa",1.31)
 
 #Example of adding name to a body in alternate language
@@ -118,6 +118,7 @@ textoR = Label(ventana,textvariable=res,font=(fontresult), bd=0, bg="alice blue"
 textoR.place(x=650,y=515)
 
 # Calculate button
-boton = Button(ventana,text="Calculate",command=lambda: calculate(planeta.get()),bg="white",fg="black", bd=0, font=(fontbuttom))
+boton = Button(ventana,text="Calculate",command=lambda: calculate(planeta.current()),bg="white",fg="black", bd=0, font=(fontbuttom))
 boton.place(x=433,y=453)
 ventana.mainloop()
+
